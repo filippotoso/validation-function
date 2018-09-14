@@ -1,0 +1,24 @@
+{
+    "name": "filippo-toso/validate-function",
+    "description": "A simple function that helps validating input for use in API development.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filippo Toso",
+            "email": "filippo.toso@creativepark.it"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/http": "^5.5",
+        "illuminate/support": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "FilippoToso\\Validator\\": "src"
+        },
+        "files": [
+            "src/validate.php"
+        ]
+    }
+}
