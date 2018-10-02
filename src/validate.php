@@ -55,7 +55,7 @@ function validate(array $rules, callable $successCallback = null, callable $fail
         }
 
         return response()->json([
-            'message' =>'Faild validation.',
+            'message' =>'Failed validation.',
             'status_code' => 422,
             'errors' => $validator->errors(),
         ], 422);
