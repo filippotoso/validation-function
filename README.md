@@ -50,6 +50,7 @@ Here is the simples example:
 ```
 use function FilippoToso\Validator\validate;
 use App\User;
+use Illuminate\Http\JsonResponse;
 
 Route::get('/users/search', function() {
 
@@ -60,6 +61,11 @@ Route::get('/users/search', function() {
         'email' => 'nullable|string',
         'orderBy' => 'required|in:username,email',
     ]);
+
+    // Validation error
+    if (!is_array($data)) {
+        return $data;
+    }
 
     // Then use the validated data to get the required response
 

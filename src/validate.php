@@ -32,6 +32,7 @@ function validate(array $rules, callable $successCallback = null, callable $fail
     $data = [];
 
     if (is_null($input)) {
+        $input = request()->all();
         $data = request()->only($validableInputs);
     } elseif (is_a($input, Request::class)) {
         $data = $input->only($validableInputs);
@@ -41,7 +42,7 @@ function validate(array $rules, callable $successCallback = null, callable $fail
         throw new \Exception('Invalid $input parameter!');
     }
 
-    $validator = Validator::make($data, $rules, $messages);
+    $validator = Validator::make($input, $rules, $messages);
 
     if ($validator->fails()) {
 
