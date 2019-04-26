@@ -13,7 +13,7 @@ A simple function that helps validating inputs for use in API development.
 Use Composer to install it:
 
 ```
-composer require filippo-toso/validation-function
+composer require filippo-toso/validate-function
 ```
 
 ## Function Signature
